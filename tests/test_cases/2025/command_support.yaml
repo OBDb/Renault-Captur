@@ -51,3 +51,6 @@ supported_commands_by_ecu:
   - 019D:FUEL_RATE_ALT,VFUEL_RATE
   - 019E:EXH_RATE
   - 01B2:BAT_SOH
+unsupported_commands_by_ecu:
+  "743":
+  - 743.220207:RENAULT_ODO
