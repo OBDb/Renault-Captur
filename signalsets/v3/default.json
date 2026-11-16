@@ -573,7 +573,7 @@
   "signals": [
     {"id": "CAPTUR_BAT_V_12_V",          "path": "Battery",  "fmt": {            "len": 8,  "max": 16.16,                "mul": 4,   "div": 125,  "add": 8,       "unit": "volts"             }, "name": "Battery voltage, 12 V"},
     {"id": "CAPTUR_AIR_T",               "path": "Engine",   "fmt": {"bix": 16,  "len": 8,  "max": 119,   "min": -40,    "mul": 5,   "div": 8,    "add": -40,     "unit": "celsius"           }, "name": "Air temperature"},
-    {"id": "CAPTUR_MANIFOLD_P_7E0",      "path": "Engine",   "fmt": {"bix": 24,  "len": 16, "max": 389,                  "mul": 37,  "div": 6400, "add": 10.3,    "unit": "kilopascal"        }, "name": "Manifold pressure"},
+    {"id": "CAPTUR_MANIFOLD_P_7E0",      "path": "Engine",   "fmt": {"bix": 24,  "len": 16, "max": 389,                  "mul": 37,  "div": 6400, "add": 10.3,    "unit": "kilopascal"        }, "name": "Manifold pressure",                               "suggestedMetric": "absoluteBoostPressure"},
     {"id": "CAPTUR_ATMOSPHERIC_P",       "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 1047,                 "mul": -37, "div": 10,   "add": 1047,    "unit": "unknown"           }, "name": "Atmospheric pressure"},
     {"id": "CAPTUR_RPM",                 "path": "Movement", "fmt": {"bix": 48,  "len": 16, "max": 65535,                                                         "unit": "rpm"               }, "name": "Engine speed"},
     {"id": "CAPTUR_IDLE_REGULATION_VLV", "path": "Engine",   "fmt": {"bix": 64,  "len": 16, "max": 65535,                                                         "unit": "rpm"               }, "name": "Idle regulation valve reference value"},
@@ -1226,7 +1226,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2401"}, "freq": 1,
   "signals": [
-    {"id": "CAPTUR_BOOST_P", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Boost pressure"}
+    {"id": "CAPTUR_BOOST_P", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Boost pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2402"}, "freq": 1,
   "signals": [
@@ -1238,7 +1238,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "240B"}, "freq": 1,
   "signals": [
-    {"id": "CAPTUR_MANIFOLD_P", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "kilopascal" }, "name": "Manifold pressure"}
+    {"id": "CAPTUR_MANIFOLD_P", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "kilopascal" }, "name": "Manifold pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "240D"}, "freq": 5,
   "signals": [
@@ -2952,7 +2952,7 @@
   ]},
 { "hdr": "DADA", "rax": "DA", "dbg": true, "cmd": {"22": "2035"}, "freq": 1,
   "signals": [
-    {"id": "CAPTUR_CRUISE_CTRL_SETTING", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometersPerHour" }, "name": "Cruise control setting"}
+    {"id": "CAPTUR_CRUISE_CTRL_SETTING", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometersPerHour" }, "name": "Cruise control setting", "suggestedMetric": "cruiseSetSpeed"}
   ]},
 { "hdr": "DADA", "rax": "DA", "dbg": true, "cmd": {"22": "2039"}, "freq": 1,
   "signals": [
