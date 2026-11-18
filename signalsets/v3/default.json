@@ -1,4 +1,7 @@
-{ "commands": [
+{ "ecu": [
+    { "hdr": "DA15", "type": "engine" }
+  ],
+  "commands": [
 { "hdr": "740", "rax": "760", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "06"}, "freq": 5,
   "signals": [
     {"id": "CAPTUR_COMPUTER_SUP_V_740", "path": "Battery", "fmt": {          "len": 8, "max": 20.4, "mul": 2, "div": 25, "unit": "volts"  }, "name": "Computer supply voltage"},
